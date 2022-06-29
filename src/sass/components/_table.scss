@@ -1,0 +1,141 @@
+.table-wrapper {
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
+
+  &--account-metrics {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &--monthly-performance {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 2;
+
+    @include respond(tab-land) {
+      grid-column: initial;
+      grid-row: initial;
+    }
+
+    .table-header .heading-tertiary {
+      @include respond(phone-big) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.table-container {
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+    border-radius: 30rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $color-grey-dark-1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary-1;
+    outline: none;
+    border-radius: 30rem;
+  }
+
+  @include respond(tab-land) {
+    overflow-x: scroll;
+  }
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-secondary-2;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem;
+
+  @include respond(phone-big) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heading-tertiary {
+    @include respond(phone-big) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.table-footer {
+  padding: 1rem 0 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trades-container {
+  @include respond(phone-big) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    width: 100%;
+  }
+
+  .btn--trade {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// Table
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: $color-grey-dark-1;
+  font-size: 1.4rem;
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: $color-grey-light-1;
+    position: relative;
+    white-space: nowrap;
+
+    @include respond(tab-port-big) {
+      min-width: 16rem;
+    }
+  }
+
+  th {
+    color: $color-grey-light-1;
+    font-weight: 300;
+    background-color: $color-primary-6;
+  }
+
+  td {
+    color: $color-grey-light-1;
+    font-weight: 300;
+  }
+
+  tr {
+    color: $color-grey-light-1;
+    font-weight: 300;
+    transition: 0.2s ease;
+    background-color: darken($color-primary-6, 15%);
+
+    &:nth-child(odd) {
+      background-color: darken($color-primary-6, 10%);
+    }
+  }
+
+  tr:hover {
+    background-color: darken($color-primary-6, 12%);
+  }
+}

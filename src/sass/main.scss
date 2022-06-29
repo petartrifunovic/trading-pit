@@ -1,0 +1,46 @@
+// Abstracts
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// Base
+@import 'base/base';
+@import 'base/compositions';
+@import 'base/typography';
+@import 'base/utilities';
+
+// Components
+@import 'components/accordion';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/chart';
+@import 'components/form';
+@import 'components/list';
+@import 'components/navigation';
+@import 'components/notifications';
+@import 'components/paginations';
+@import 'components/statistics';
+@import 'components/table';
+@import 'components/tooltip';
+
+// Layout
+@import 'layout/header';
+@import 'layout/layout';
+@import 'layout/sidebar';
+
+// Pages
+@import 'pages/account-metrics';
+@import 'pages/dashboard';
+@import 'pages/platform-download';
+@import 'pages/profile';
+@import 'pages/profit-share';
+
+// FontAwesome
+@import '../fontawesome/scss/fontawesome.scss';
+@import '../fontawesome/scss/solid.scss';
+@import '../fontawesome/scss/brands.scss';
+@import '../fontawesome/scss/regular.scss';
+@import '../fontawesome/scss/light.scss';
+@import '../fontawesome/scss/thin.scss';
+
+@import '../fontawesome/scss/duotone.scss';
+@import '../fontawesome/scss/_duotone-icons.scss';

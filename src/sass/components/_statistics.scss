@@ -1,0 +1,123 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $color-secondary-2;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+  transition: 0.2s ease;
+
+  @include respond(phone) {
+    &:nth-last-child(-n + 5) {
+      display: none;
+    }
+  }
+
+  &--visible {
+    display: flex !important;
+  }
+
+  &:hover {
+    box-shadow: $box-shadow-dark;
+    transform: translateY(-0.3rem);
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    color: $color-primary-2;
+
+    &--balance {
+      color: #aaaaaa;
+    }
+
+    &--profit {
+      color: #6ba775;
+    }
+
+    &--equity {
+      color: #646f8a;
+    }
+
+    &--traded {
+      color: #f7f7f7;
+    }
+
+    &--dbreach {
+      color: #ae8c23;
+    }
+
+    &--mbreach {
+      color: #ae411f;
+    }
+
+    &--remaining {
+      color: #f7f7f7;
+    }
+  }
+
+  &__value {
+    color: $color-grey-light-1;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+
+    &--balance,
+    &--profit,
+    &--equity,
+    &--traded,
+    &--dbreach,
+    &--mbreach,
+    &--remaining {
+      &::before {
+        content: '●';
+        font-size: 1.4rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &--balance {
+      &::before {
+        color: #aaaaaa;
+      }
+    }
+
+    &--profit {
+      &::before {
+        color: #6ba775;
+      }
+    }
+
+    &--equity {
+      &::before {
+        color: #646f8a;
+      }
+    }
+
+    &--traded {
+      &::before {
+        color: #f7f7f7;
+      }
+    }
+
+    &--dbreach {
+      &::before {
+        color: #ae8c23;
+      }
+    }
+
+    &--mbreach {
+      &::before {
+        color: #ae411f;
+      }
+    }
+
+    &--remaining {
+      &::before {
+        color: #f7f7f7;
+      }
+    }
+  }
+}

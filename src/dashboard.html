@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--FontAwesome-->
+    <script
+      src="https://kit.fontawesome.com/02999118ab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Main Wrapper-->
+    <div class="wrapper">
+      <!--Sticky Nav-->
+      <div class="sticky-nav">
+        <img
+          class="logo__mobile"
+          src="img/trading_pit_logo.svg"
+          alt="Trading Pit"
+        />
+
+        <i class="fa-light fa-bars hamburger-open"></i>
+      </div>
+
+      <!--Sidebar-->
+      <aside class="sidebar">
+        <i class="fa-light fa-xmark hamburger-close"></i>
+
+        <!--Main Logo-->
+        <img class="logo" src="img/trading_pit_logo.svg" alt="Trading Pit" />
+        <!--Navigation-->
+        <ul class="nav">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-browser nav__icon"></i>
+              </div>
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-chart-line nav__icon"></i>
+              </div>
+              Account Metrics
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-bell nav__icon"></i>
+              </div>
+              Notifications
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-circle-question nav__icon"></i>
+              </div>
+              FAQ
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-arrow-down-to-bracket nav__icon"></i>
+              </div>
+              Platform Download
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-sack nav__icon"></i>
+              </div>
+              Profit Share
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-user nav__icon"></i>
+              </div>
+              My Profile
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <div class="nav__icon-container">
+                <i class="fa-light fa-arrow-right-from-bracket nav__icon"></i>
+              </div>
+              Logout
+            </a>
+          </li>
+        </ul>
+
+        <!--Sidebar Bottom-->
+        <div class="sidebar__bottom">
+          <btn class="btn btn--secondary">Request Upgrade</btn>
+          <btn class="btn btn--secondary">Purchase Reset</btn>
+          <btn class="btn btn--secondary">Purchase Time Extension</btn>
+
+          <div class="current-time">
+            <span class="current-time__title">Current UTC Time</span>
+            <span class="current-time__time">02/16/2022 17:43:45</span>
+          </div>
+        </div>
+      </aside>
+
+      <!--Main-->
+      <main class="main">
+        <!--Header-->
+        <header class="header">
+          <h2 class="heading-secondary">
+            <i class="fa-light fa-browser heading-secondary--icon"></i>Dashboard
+          </h2>
+          <div class="status-container">
+            <div class="status">
+              <span class="status__title">
+                <i class="fa-light fa-presentation-screen status__icon"></i>
+                Plan Status:
+              </span>
+              <span class="status__value">Lorem ipsum</span>
+            </div>
+            <div class="status">
+              <span class="status__title">
+                <i class="fa-light fa-memo-pad status__icon"></i>
+                Account Status:
+              </span>
+              <span class="status__value">Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="select-container">
+            <i class="fa-light fa-chevron-down select-arrow"></i>
+            <select class="select">
+              <option value="Item 1" selected>Client Accounts</option>
+              <option value="Item 2">Item 1</option>
+              <option value="Item 3">Item 2</option>
+              <option value="Item 4">Item 3</option>
+            </select>
+          </div>
+        </header>
+
+        <!--Section Dashboard-->
+        <section class="section section__dashboard">
+          <!--Statisctics-->
+          <div class="dashboard-stats">
+            <div class="stats">
+              <span class="stats__title stats__title--balance">
+                Current Balance
+              </span>
+              <span class="stats__value stats__value--balance">$100,000</span>
+            </div>
+
+            <div class="stats">
+              <span class="stats__title stats__title--profit">
+                Profit Target
+              </span>
+              <span class="stats__value stats__value--profit">$110,000</span>
+            </div>
+
+            <div class="stats">
+              <span class="stats__title stats__title--equity">
+                Current Equity
+              </span>
+              <span class="stats__value stats__value--equity">$110,000</span>
+            </div>
+
+            <div class="stats">
+              <span class="stats__title stats__title--traded">
+                Number of Days Traded
+              </span>
+              <span class="stats__value stats__value--traded">$50,000</span>
+            </div>
+
+            <div class="stats">
+              <span class="stats__title stats__title--dbreach">
+                Daily Breach Level
+              </span>
+              <span class="stats__value stats__value--dbreach">$96,000</span>
+            </div>
+
+            <div class="stats">
+              <span class="stats__title stats__title--mbreach">
+                Max Breach Level
+              </span>
+              <span class="stats__value stats__value--mbreach">$96,000</span>
+            </div>
+
+            <div class="stats">
+              <span class="stats__title stats__title--remaining">
+                Number of Days Remaining
+              </span>
+              <span class="stats__value stats__value--remaining">$96,000</span>
+            </div>
+
+            <button class="btn btn--toggle">View More</button>
+          </div>
+
+          <!--Chart-->
+          <div class="chart-wrapper">
+            <div class="chart">
+              <div class="chart__container">
+                <span class="chart__info-text">Gross Turnover</span>
+                <span class="chart__info-year">Year</span>
+                <div class="chart__info-box">
+                  <span class="chart__info">0</span>
+                  <span class="chart__info">500</span>
+                  <span class="chart__info">1000</span>
+                  <span class="chart__info">1500</span>
+                  <span class="chart__info">2000</span>
+                  <span class="chart__info">2500</span>
+                  <span class="chart__info">3000</span>
+                  <span class="chart__info">3500</span>
+                  <span class="chart__info">4000</span>
+                  <span class="chart__info">4500</span>
+                </div>
+                <div class="chart__data-box">
+                  <div
+                    class="chart__data chart__data--blue chart__data--1"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--blue chart__data--2"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--blue chart__data--3"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--blue chart__data--4"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--blue chart__data--5"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart">
+              <div class="chart__container">
+                <span class="chart__info-text">Gross Turnover</span>
+                <span class="chart__info-year">Year</span>
+                <div class="chart__info-box">
+                  <span class="chart__info">0%</span>
+                  <span class="chart__info">5%</span>
+                  <span class="chart__info">10%</span>
+                  <span class="chart__info">15%</span>
+                  <span class="chart__info">20%</span>
+                  <span class="chart__info">25%</span>
+                  <span class="chart__info">30%</span>
+                  <span class="chart__info">35%</span>
+                  <span class="chart__info">40%</span>
+                </div>
+                <div class="chart__data-box">
+                  <div
+                    class="chart__data chart__data--green chart__data--9"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--green chart__data--10"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--green chart__data--11"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--green chart__data--12"
+                  ></div>
+                  <div
+                    class="chart__data chart__data--green chart__data--13"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notifications-container">
+            <!--Notifications-->
+            <div class="notification">
+              <div class="notification__item">
+                <span class="notification__item-title">Account</span>
+                <span class="notification__item-text">
+                  eric+0002@fpfxtech.com
+                </span>
+              </div>
+              <div class="notification__item">
+                <span class="notification__item-title">Time (UTC)</span>
+                <span class="notification__item-text">
+                  02/10/2022 15:41:29
+                </span>
+              </div>
+              <div class="notification__item notification__item--message">
+                <span class="notification__item-title">Message</span>
+                <span class="notification__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  eu tellus eu purus lobortis pulvinar ac ut magna. Mauris
+                  fermentum sed ante a molestie. Maecenas vitae dui quis risus
+                  cursus pulvinar. Fusce vehicula auctor urna eu fringilla. Sed
+                  ac cursus neque. Nullam dignissim nisl rutrum justo venenatis
+                  placerat.
+                </span>
+              </div>
+            </div>
+
+            <div class="notification">
+              <div class="notification__item">
+                <span class="notification__item-title">Account</span>
+                <span class="notification__item-text">
+                  eric+0002@fpfxtech.com
+                </span>
+              </div>
+              <div class="notification__item">
+                <span class="notification__item-title">Time (UTC)</span>
+                <span class="notification__item-text">
+                  02/10/2022 15:41:29
+                </span>
+              </div>
+              <div class="notification__item notification__item--message">
+                <span class="notification__item-title">Message</span>
+                <span class="notification__item-text">
+                  Donec laoreet gravida felis nec scelerisque. Aliquam semper
+                  mauris a tincidunt molestie. Nam accumsan tellus aliquet
+                  libero congue, ut elementum enim pulvinar. Quisque consequat
+                  volutpat placerat. Etiam feugiat consequat vestibulum. Nulla
+                  vulputate non libero a varius. Pellentesque sed varius lorem.
+                </span>
+              </div>
+            </div>
+
+            <div class="notification">
+              <div class="notification__item">
+                <span class="notification__item-title">Account</span>
+                <span class="notification__item-text">
+                  eric+0002@fpfxtech.com
+                </span>
+              </div>
+              <div class="notification__item">
+                <span class="notification__item-title">Time (UTC)</span>
+                <span class="notification__item-text">
+                  02/10/2022 15:41:29
+                </span>
+              </div>
+              <div class="notification__item notification__item--message">
+                <span class="notification__item-title">Message</span>
+                <span class="notification__item-text">
+                  Suspendisse scelerisque hendrerit pretium. Maecenas tincidunt,
+                  ante sed facilisis euismod, nisl orci tempor elit, id
+                  pellentesque diam nisi eget urna.
+                </span>
+              </div>
+            </div>
+
+            <div class="notification">
+              <div class="notification__item">
+                <span class="notification__item-title">Account</span>
+                <span class="notification__item-text">
+                  eric+0002@fpfxtech.com
+                </span>
+              </div>
+              <div class="notification__item">
+                <span class="notification__item-title">Time (UTC)</span>
+                <span class="notification__item-text">
+                  02/10/2022 15:41:29
+                </span>
+              </div>
+              <div class="notification__item notification__item--message">
+                <span class="notification__item-title">Message</span>
+                <span class="notification__item-text">
+                  Quisque ornare elit id ante egestas congue. Aliquam nec odio
+                  in quam facilisis sagittis. Proin vulputate efficitur
+                  convallis. Curabitur pellentesque vitae dui sed mollis. Proin
+                  mattis nunc ut nibh ultrices, a finibus nulla eleifend. In
+                  risus sem, varius sit amet lorem in, gravida euismod enim. In
+                  laoreet rutrum ligula nec elementum.
+                </span>
+              </div>
+            </div>
+
+            <div class="notification">
+              <div class="notification__item">
+                <span class="notification__item-title">Account</span>
+                <span class="notification__item-text">
+                  eric+0002@fpfxtech.com
+                </span>
+              </div>
+              <div class="notification__item">
+                <span class="notification__item-title">Time (UTC)</span>
+                <span class="notification__item-text">
+                  02/10/2022 15:41:29
+                </span>
+              </div>
+              <div class="notification__item notification__item--message">
+                <span class="notification__item-title">Message</span>
+                <span class="notification__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  eu tellus eu purus lobortis pulvinar ac ut magna. Mauris
+                  fermentum sed ante a molestie. Maecenas vitae dui quis risus
+                  cursus pulvinar. Fusce vehicula auctor urna eu fringilla. Sed
+                  ac cursus neque. Nullam dignissim nisl rutrum justo venenatis
+                  placerat.
+                </span>
+              </div>
+            </div>
+
+            <div class="notification">
+              <div class="notification__item">
+                <span class="notification__item-title">Account</span>
+                <span class="notification__item-text">
+                  eric+0002@fpfxtech.com
+                </span>
+              </div>
+              <div class="notification__item">
+                <span class="notification__item-title">Time (UTC)</span>
+                <span class="notification__item-text">
+                  02/10/2022 15:41:29
+                </span>
+              </div>
+              <div class="notification__item notification__item--message">
+                <span class="notification__item-title">Message</span>
+                <span class="notification__item-text">
+                  Donec laoreet gravida felis nec scelerisque. Aliquam semper
+                  mauris a tincidunt molestie. Nam accumsan tellus aliquet
+                  libero congue, ut elementum enim pulvinar. Quisque consequat
+                  volutpat placerat. Etiam feugiat consequat vestibulum. Nulla
+                  vulputate non libero a varius. Pellentesque sed varius lorem.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!--Table-->
+          <div class="table-wrapper">
+            <div class="table-header">
+              <h2 class="heading-tertiary">
+                <i class="fa-light fa-chart-area heading-tertiary--icon"></i>
+                Trade History
+              </h2>
+
+              <div class="trades-container">
+                <button class="btn btn--trade">
+                  <i class="fa-light fa-lock-open btn--trade-icon"></i>
+                  Open Trades
+                </button>
+                <button class="btn btn--trade">
+                  <i class="fa-light fa-lock btn--trade-icon"></i>
+                  Closed Trades
+                </button>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="table table__trade-history">
+                <tr>
+                  <th>Ticket</th>
+                  <th>Open Time (Server)</th>
+                  <th>Open Price</th>
+                  <th>Close Time (Server)</th>
+                  <th>Close Price</th>
+                  <th>Side</th>
+                  <th>Symbol</th>
+                  <th>Volume</th>
+                  <th>Net Profit</th>
+                </tr>
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+
+                <tr>
+                  <td>100022442203</td>
+                  <td>2021-12-08T19:12:08Z</td>
+                  <td>81.606260</td>
+                  <td>2021-12-08T19:18:02Z</td>
+                  <td>81.560240</td>
+                  <td>Sell</td>
+                  <td>AUDJPY</td>
+                  <td>100.00</td>
+                  <td>$-0.04</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="table-footer">
+              <!--Pagination-->
+              <ul class="pagination">
+                <li class="pagination__item">
+                  <a
+                    class="previous__btn"
+                    tabindex="0"
+                    role="button"
+                    aria-disabled="false"
+                    aria-label="Previous page"
+                    rel="prev"
+                  >
+                    <i class="fa-light fa-chevron-left"></i>
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a
+                    class="pagination__btn"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Page 1"
+                  >
+                    1
+                  </a>
+                </li>
+                <li class="pagination__item pagination__item--active">
+                  <a
+                    class="pagination__btn"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Page 2 is your current page"
+                    aria-current="page"
+                  >
+                    2
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a
+                    class="pagination__btn"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Page 3"
+                  >
+                    3
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="break__btn" role="button" tabindex="0"> ... </a>
+                </li>
+                <li class="pagination__item">
+                  <a
+                    class="pagination__btn"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Page 35"
+                  >
+                    35
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a
+                    class="pagination__btn"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Page 35"
+                  >
+                    36
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a
+                    class="next__btn"
+                    tabindex="0"
+                    role="button"
+                    aria-disabled="false"
+                    aria-label="Next page"
+                    rel="next"
+                  >
+                    <i class="fa-light fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--FAQ-->
+          <div class="card">
+            <div class="card__header">
+              <h3 class="heading-tertiary">
+                <i class="fa-light fa-chalkboard heading-tertiary--icon"></i>
+                Definitions
+              </h3>
+            </div>
+            <div class="card__content">
+              <!--FAQ Start-->
+              <div class="accordion">
+                <div class="accordion__panel">
+                  <h3 class="accordion__header">
+                    <i class="fa-light fa-plus accordion__icon"></i>
+                    Currency pair
+                  </h3>
+                  <div class="accordion__body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime nesciunt dolores eius facere nostrum quasi fuga
+                    soluta assumenda laboriosam beatae cupiditate tenetur modi
+                    quidem, doloribus asperiores libero veritatis qui eos?
+                  </div>
+                </div>
+
+                <div class="accordion__panel">
+                  <h3 class="accordion__header">
+                    <i class="fa-light fa-plus accordion__icon"></i>
+                    Drawdown on Evaluation Stages
+                  </h3>
+                  <div class="accordion__body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Architecto sunt ullam molestiae nemo possimus fugiat illo,
+                    illum consequuntur eaque ex dolores aliquam consequatur
+                    deserunt saepe, nobis sit? Voluptas, explicabo culpa?
+                  </div>
+                </div>
+
+                <div class="accordion__panel">
+                  <h3 class="accordion__header">
+                    <i class="fa-light fa-plus accordion__icon"></i>
+                    Exchange rate
+                  </h3>
+                  <div class="accordion__body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo inventore neque sunt corporis et recusandae excepturi
+                    facere quos a, quod nihil debitis similique aliquid alias
+                    consectetur optio! Quos, est blanditiis?
+                  </div>
+                </div>
+
+                <div class="accordion__panel">
+                  <h3 class="accordion__header">
+                    <i class="fa-light fa-plus accordion__icon"></i>
+                    Inactivity Period
+                  </h3>
+                  <div class="accordion__body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo inventore neque sunt corporis et recusandae excepturi
+                    facere quos a, quod nihil debitis similique aliquid alias
+                    consectetur optio! Quos, est blanditiis?
+                  </div>
+                </div>
+
+                <div class="accordion__panel">
+                  <h3 class="accordion__header">
+                    <i class="fa-light fa-plus accordion__icon"></i>
+                    Major pairs
+                  </h3>
+                  <div class="accordion__body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo inventore neque sunt corporis et recusandae excepturi
+                    facere quos a, quod nihil debitis similique aliquid alias
+                    consectetur optio! Quos, est blanditiis?
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Section FAQ-->
+        <!-- <section class="section section__faq">
+
+        </section> -->
+      </main>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

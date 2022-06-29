@@ -1,0 +1,12 @@
+.logo {
+  height: 5.8rem;
+  margin-bottom: 3rem;
+
+  @include respond(tab-land) {
+    height: 5.5rem;
+  }
+
+  &__mobile {
+    height: 6rem;
+  }
+}

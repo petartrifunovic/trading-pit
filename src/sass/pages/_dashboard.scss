@@ -1,0 +1,50 @@
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1.5rem;
+
+  @include respond(desktop-big) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond(tab-port-big) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(phone-big) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    &:nth-child(1) {
+      @include respond(desktop-big) {
+        grid-column: 1 / 2;
+        grid-row: 1 / span 2;
+      }
+
+      @include respond(tab-port-big) {
+        grid-column: inherit;
+        grid-row: initial;
+      }
+    }
+
+    &:nth-child(7) {
+      @include respond(tab-port-big) {
+        grid-column: 1 / span 3;
+      }
+
+      @include respond(phone-big) {
+        grid-column: 1 / span 2;
+      }
+
+      @include respond(phone) {
+        grid-column: inherit;
+        grid-row: initial;
+      }
+    }
+  }
+}

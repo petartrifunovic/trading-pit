@@ -1,0 +1,18 @@
+.list {
+  list-style: none;
+  list-style-position: inside;
+
+  &__item {
+    color: $color-primary-2;
+
+    &::before {
+      font-family: 'Font Awesome 6 Pro';
+      font-weight: 300;
+      content: '\f105';
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      top: -2px;
+      position: relative;
+    }
+  }
+}

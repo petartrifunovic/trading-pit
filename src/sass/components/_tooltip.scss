@@ -1,0 +1,34 @@
+// Icon Tooltip
+.tooltip-container {
+  position: relative;
+  display: inline;
+  height: max-content;
+  width: max-content;
+}
+
+.icon-tooltip {
+  cursor: pointer;
+  margin-left: 1rem;
+
+  &:hover + &__message {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -4rem);
+  }
+
+  &__message {
+    background-color: $color-grey-dark-1;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    width: max-content;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%, -5rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+}

@@ -1,0 +1,77 @@
+// Header
+.header {
+  grid-row: 1 / -1;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba($color-primary-1, 0.3);
+
+  display: flex;
+  align-items: center;
+
+  .heading-secondary {
+    flex: 1;
+
+    @include respond(tab-port-big) {
+      grid-column: 1 / span 2;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @include respond(tab-port-big) {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+}
+
+// Status
+.status-container {
+  display: flex;
+  align-items: center;
+
+  @include respond(tab-port) {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @include respond(phone-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.status {
+  font-size: 1.5rem;
+
+  &:not(:last-child) {
+    margin-right: 3rem;
+
+    @include respond(tab-port) {
+      margin-right: 0;
+    }
+  }
+
+  @include respond(tab-port) {
+    background-color: rgba($color-grey-light-1, 0.075);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $box-shadow;
+  }
+
+  &__title {
+    font-size: inherit;
+  }
+
+  &__value {
+    font-weight: 300;
+    color: $color-primary-2;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+  }
+}

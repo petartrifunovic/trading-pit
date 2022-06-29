@@ -1,0 +1,29 @@
+.profit-share-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  width: 80%;
+
+  @include respond(tab-land) {
+    width: 100%;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    display: flex;
+  }
+
+  .btn--primary {
+    grid-column: 1 / -1;
+    padding: 3rem 1rem;
+    font-size: $default-font-size;
+  }
+}

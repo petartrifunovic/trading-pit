@@ -1,0 +1,50 @@
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-light-1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.heading-secondary {
+  font-size: 2.2rem;
+  font-weight: 400;
+
+  &--icon {
+    margin-right: 1rem;
+    color: $color-primary-2;
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 400;
+  color: $color-grey-light-1;
+
+  &--icon {
+    font-size: inherit;
+    margin-right: 0.5rem;
+  }
+}
+
+.heading-4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $color-grey-light-2;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  color: $color-grey-light-1;
+
+  @include respond(phone-small) {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

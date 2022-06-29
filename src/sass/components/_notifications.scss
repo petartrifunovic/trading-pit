@@ -1,0 +1,57 @@
+.notifications-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notification {
+  background-color: $color-secondary-2;
+  padding: 0 2rem;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+  transition: 0.2s ease;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    box-shadow: $box-shadow-dark;
+    transform: translateY(-0.3rem);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-primary-6;
+    }
+
+    &--message {
+      flex-direction: column;
+    }
+  }
+
+  &__item-title {
+    font-weight: 400;
+  }
+
+  &__item-text {
+    color: $color-primary-2;
+    font-weight: 300;
+
+    &--message {
+      display: block;
+    }
+  }
+}

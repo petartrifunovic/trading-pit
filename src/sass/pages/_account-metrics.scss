@@ -1,0 +1,20 @@
+.trade-stats {
+  display: grid;
+  grid-gap: 1.5rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond(tab-port-big) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    display: flex;
+  }
+}

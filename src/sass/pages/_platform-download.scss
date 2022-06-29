@@ -1,0 +1,15 @@
+.platform-download-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  min-width: 80rem;
+
+  @include respond(tab-port-big) {
+    min-width: 100%;
+    grid-gap: 1.5rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,47 @@
+// Accordionv
+.accordion {
+  width: 100%;
+
+  &__panel {
+    background-color: rgba($color-grey-light-1, 0.1);
+    border-left: 2px solid rgba($color-grey-light-1, 0.3);
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__header {
+    font-size: $default-font-size;
+    font-weight: 400;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+
+    @include respond(phone) {
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__body {
+    padding: 0 2rem 2rem;
+    font-size: 1.5rem;
+    color: $color-primary-2;
+  }
+
+  &__panel > &__body {
+    display: none;
+  }
+
+  &__panel.accordion-expanded > &__body {
+    display: block;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+
+    @include respond(phone) {
+      margin-left: 0.5rem;
+    }
+  }
+}
